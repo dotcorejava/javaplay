@@ -29,7 +29,7 @@ public class Variables {
         out.println("输入2：");
         var n2 = scanner.nextInt();
         scanner.close();
-        out.println((double) (n2 - n1) / n1);
+        out.printf("%.2f%%\n", (double) (n2 - n1) * 100 / n1);
     }
 }
 
