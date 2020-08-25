@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import static java.lang.System.out;
 
 public class Loops {
     public static void main(String[] args) {
@@ -9,12 +10,12 @@ public class Loops {
         var m = 10;
         var n = 100;
         while (m <= n) {
-            System.out.println(m);
+            out.println(m);
             m++;
         }
 
         for (String arg : args) {
-            System.out.println(arg);
+            out.println(arg);
         }
     }
 
@@ -24,62 +25,62 @@ public class Loops {
         var s3 = "HELLO".toLowerCase();
 
         if (s1 == s2) {
-            System.out.println(true);
+            out.println(true);
         } else {
-            System.out.println(false);
+            out.println(false);
         }
         if (s1 == s3) {
-            System.out.println(true);
+            out.println(true);
         } else {
-            System.out.println(false);
+            out.println(false);
         }
         if (s1 != null && s1.equals(s3)) {
-            System.out.println(true);
+            out.println(true);
         } else {
-            System.out.println(false);
+            out.println(false);
         }
     }
 
     private static void calcBMI() {
         var scanner = new Scanner(System.in);
 
-        System.out.println("请输入体重：");
+        out.println("请输入体重：");
         var weight = scanner.nextFloat();
-        System.out.println("请输入身高：");
+        out.println("请输入身高：");
         var height = scanner.nextFloat();
 
         var bmi = Math.pow(weight / height, 2);
 
         if (bmi < 18.5) {
-            System.out.print("过轻：");
+            out.print("过轻：");
         } else if (bmi <= 25) {
-            System.out.print("正常：");
+            out.print("正常：");
         } else if (bmi <= 28) {
-            System.out.print("过重：");
+            out.print("过重：");
         } else if (bmi <= 32) {
-            System.out.print("肥胖：");
+            out.print("肥胖：");
         } else {
-            System.out.print("非常肥胖：");
+            out.print("非常肥胖：");
         }
 
-        System.out.println(bmi);
+        out.println(bmi);
         scanner.close();
     }
 
     private static void guessAction() {
         var scanner = new Scanner(System.in);
-        System.out.println("请输入：");
+        out.println("请输入：");
         var action = scanner.nextInt();
 
         switch (action) {
             case 1:
-                System.out.println(1);
+                out.println(1);
                 break;
             case 2:
-                System.out.println(2);
+                out.println(2);
                 break;
             default:
-                System.out.println(3);
+                out.println(3);
                 break;
         }
         scanner.close();
